@@ -143,7 +143,8 @@ spec:
         for config_type in IS_CONFIGURATION_SERVERCONF IS_CONFIGURATION_SETDBPARMS \
                       IS_CONFIGURATION_KEYSTORE IS_CONFIGURATION_TRUSTSTORE \
                       IS_CONFIGURATION_POLICYPROJECT IS_CONFIGURATION_LOOPBACKDATASOURCE; do
-
+          echo "***START CONFIG ***"
+          echo "config_type :${config_type}"          
           configurations="${configurations} $(process_configrations $config_type)"
 
         done
