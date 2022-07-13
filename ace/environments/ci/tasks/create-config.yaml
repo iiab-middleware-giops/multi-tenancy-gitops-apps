@@ -70,6 +70,10 @@ spec:
         config_template_path=${WORKSPACE_PATH}/${IS_INFRA_DIRECTORY}
         rendered_config_directory=${RENDERED_CONFIG_DIRECTORY}
         config_definition_path=${WORKSPACE_PATH}/${IS_CONFIG_DIRECTORY}
+        
+        echo $config_template_path
+        echo $rendered_config_directory
+        echo $config_definition_path
 
         create_configurations() {
           local type=$1
