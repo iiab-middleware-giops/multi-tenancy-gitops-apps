@@ -82,8 +82,6 @@ spec:
           local sanitised_file_name=$(echo $config | sed 's/\./_/g;s/-/_/g;s/^[[:upper:]]/\L&/;s/[[:upper:]]/\L_&/g')
           local sanitised_config_name=$(echo $config | sed 's/^[[:upper:]]/\L&/;s/_/-/g;s/[[:upper:]]/\L-&/g')
 
-          echo $sanitised_file_name
-          echo $sanitised_config_name
           
           case $type in
           setdbparms | keystore | truststore)
