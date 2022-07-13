@@ -104,48 +104,48 @@ spec:
         - name: input
           workspace: shared-workspace
 
-    # - name: create-config
-      # params:
-        # - name: is-config-directory
-          # value: is-config
-        # - name: is-infra-directory
-          # value: is-infra
-        # - name: is-configuration-keystore
-          # value: $(tasks.resolve-props.results.is-configuration-keystore)
-        # - name: is-configuration-truststore
-          # value: $(tasks.resolve-props.results.is-configuration-truststore)
-        # - name: is-configuration-setdbparms
-          # value: $(tasks.resolve-props.results.is-configuration-setdbparms)
-        # - name: is-configuration-serverconf
-          # value: $(tasks.resolve-props.results.is-configuration-serverconf)
-        # - name: is-configuration-policyproject
-          # value: $(tasks.resolve-props.results.is-configuration-policyproject)
-        # - name: is-configuration-loopbackdatasource
-          # value: $(tasks.resolve-props.results.is-configuration-loopbackdatasource)
-        # - name: rendered-config-directory
-          # value: gitops-repo/ace/environments/base/configurations
-        # - name: repo-directory
-          # value: gitops-repo
-        # - name: user-name
-          # value: "cicd.acme"
-        # - name: user-email
-          # value: "cicd@acme.com"
-        # - name: kustomization-path
-          # value: gitops-repo/ace/environments/base/kustomization.yaml
-        # - name: branch_name
-          # value: $(context.pipeline.name)-$(context.pipelineRun.name)
-      # runAfter:
-        # - resolve-props
-        # - clone-is-infra-repo
-        # - clone-gitops-repo
-      # taskRef:
-        # kind: Task
-        # name: create-config
-      # workspaces:
-        # - name: workspace
-          # workspace: shared-workspace
-        # - name: ssh-directory
-          # workspace: gitops-repo-secret
+    - name: create-config
+      params:
+        - name: is-config-directory
+          value: is-config
+        - name: is-infra-directory
+          value: is-infra
+        - name: is-configuration-keystore
+          value: $(tasks.resolve-props.results.is-configuration-keystore)
+        - name: is-configuration-truststore
+          value: $(tasks.resolve-props.results.is-configuration-truststore)
+        - name: is-configuration-setdbparms
+          value: $(tasks.resolve-props.results.is-configuration-setdbparms)
+        - name: is-configuration-serverconf
+          value: $(tasks.resolve-props.results.is-configuration-serverconf)
+        - name: is-configuration-policyproject
+          value: $(tasks.resolve-props.results.is-configuration-policyproject)
+        - name: is-configuration-loopbackdatasource
+          value: $(tasks.resolve-props.results.is-configuration-loopbackdatasource)
+        - name: rendered-config-directory
+          value: gitops-repo/ace/environments/base/configurations
+        - name: repo-directory
+          value: gitops-repo
+        - name: user-name
+          value: "cicd.acme"
+        - name: user-email
+          value: "cicd@acme.com"
+        - name: kustomization-path
+          value: gitops-repo/ace/environments/base/kustomization.yaml
+        - name: branch_name
+          value: $(context.pipeline.name)-$(context.pipelineRun.name)
+      runAfter:
+        - resolve-props
+        - clone-is-infra-repo
+        - clone-gitops-repo
+      taskRef:
+        kind: Task
+        name: create-config
+      workspaces:
+        - name: workspace
+          workspace: shared-workspace
+        - name: ssh-directory
+          workspace: gitops-repo-secret
     # - name: create-pull-request
       # taskRef:
         # kind: Task
