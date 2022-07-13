@@ -78,9 +78,6 @@ spec:
         create_configurations() {
           local type=$1
           local config=$2
-          echo "create_configurations ## ###"
-          echo $type
-          echo $config
         
           local sanitised_file_name=$(echo $config | sed 's/\./_/g;s/-/_/g;s/^[[:upper:]]/\L&/;s/[[:upper:]]/\L_&/g')
           local sanitised_config_name=$(echo $config | sed 's/^[[:upper:]]/\L&/;s/_/-/g;s/[[:upper:]]/\L-&/g')
