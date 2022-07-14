@@ -77,7 +77,7 @@ spec:
         resolve_prop '.integrationServer.version' $(results.is-version.path)
         resolve_prop '.integrationServer.baseImage' $(results.is-base-image.path)
         
-        echo '### ANAS ###'
+        echo '### ANAS ### '
         echo $(results.is-project.path)
         echo $(results.is-application-name.path)
         echo $(results.is-release-name.path)
