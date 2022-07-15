@@ -7,7 +7,7 @@ spec:
     kind: Service
     name: el-ace-integration-server
   port:
-    targetPort: https-listener
+    targetPort: http
   tls:
     termination: passthrough
   wildcardPolicy: None
