@@ -25,21 +25,21 @@ spec:
         - ref: ace-integration-server
       template:
         ref: ace-integration-server
-  # resources:
-    # kubernetesResource:
-      # spec:
-        # template:
-          # spec:
-            # serviceAccountName: pipeline
-            # containers:
-              # - env:
-                # - name: TLS_CERT
-                  # valueFrom:
-                    # secretKeyRef:
-                      # name: prod-ref-devops-tls-key-pair
-                      # key: tls.crt
-                # - name: TLS_KEY
-                  # valueFrom:
-                    # secretKeyRef:
-                      # name: prod-ref-devops-tls-key-pair
-                      # key: tls.key
+  resources:
+    kubernetesResource:
+      spec:
+        template:
+          spec:
+            serviceAccountName: pipeline
+            containers:
+              - env:
+                - name: TLS_CERT
+                  valueFrom:
+                    secretKeyRef:
+                      name: prod-ref-devops-tls-key-pair
+                      key: tls.crt
+                - name: TLS_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: prod-ref-devops-tls-key-pair
+                      key: tls.key
