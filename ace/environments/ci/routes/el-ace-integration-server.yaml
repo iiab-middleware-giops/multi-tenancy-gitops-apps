@@ -6,8 +6,8 @@ metadata:
 spec: 
   port: 
     targetPort: http
-    tls: 
-      termination: passthrough
+    #tls: 
+    #  termination: passthrough
   to: 
     kind: Service
     name: el-ace-integration-server
