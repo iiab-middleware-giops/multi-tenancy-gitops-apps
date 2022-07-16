@@ -1,14 +1,14 @@
-kind: Route
+--- 
 apiVersion: route.openshift.io/v1
-metadata:
+kind: Route
+metadata: 
   name: el-ace-integration-server
-spec:
-  to:
+spec: 
+  port: 
+    targetPort: http
+    tls: 
+      termination: passthrough
+  to: 
     kind: Service
     name: el-ace-integration-server
-  port:
-    targetPort: http
-    tls:
-      termination: passthrough
   wildcardPolicy: None
-
