@@ -19,7 +19,7 @@ resources:
   - roles/custom-images-builder-rolebinding.yaml
 # - roles/custom-pipeline-clusterrole.yaml
 # - roles/custom-pipeline-clusterrolebinding.yaml
-  - routes/el-ace-integration-server.yaml
+#  - routes/el-ace-integration-server.yaml
 # - secrets/basic-auth-rest-secret.yaml
 # - secrets/git-credentials-secret.yaml
 # - secrets/ibm-ace-server-jks-secret.yaml
@@ -49,8 +49,8 @@ resources:
 # - tasks/ibm-gitops-for-ace-task.yaml
 # - tasks/ibm-jmeter-performance-test.yaml
   - tasks/resolve-props.yaml
-  - triggerbindings/ace-integration-server.yaml
-  - triggertemplates/ace-integration-server.yaml
+#  - triggerbindings/ace-integration-server.yaml
+#  - triggertemplates/ace-integration-server.yaml
   - secrets/gitops-repo-pk-secret-ace-config-at-github.yaml
   - secrets/gitops-repo-pk-secret-ace-infra-at-github.yaml
   - secrets/gitops-repo-pk-secret-multi-tenancy-gitops-apps-at-github.yaml
