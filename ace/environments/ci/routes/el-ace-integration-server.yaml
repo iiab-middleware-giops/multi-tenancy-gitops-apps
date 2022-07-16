@@ -5,7 +5,7 @@ metadata:
   name: el-ace-integration-server
 spec: 
   port: 
-    targetPort: http
+    targetPort: http-listener
     #tls: 
     #  termination: passthrough
   to: 
