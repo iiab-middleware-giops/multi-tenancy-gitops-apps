@@ -32,7 +32,10 @@ spec:
       image: mikefarah/yq:4.7.1
       script: |
         set -ex
+        pwd
+        ls
         echo $(workspaces.input.path)
+        
         echo $(params.is-source-directory)
         properties_yaml_path=$(workspaces.input.path)/$(params.is-source-directory)/pipeline_properties.yaml
 
